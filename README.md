@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# CalorieTracker - React & useReducer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![CalorieTracker](public/photoApp.png)
 
-Currently, two official plugins are available:
+## Descripción
+Este proyecto es una aplicación de control de calorías tanto para el deporte como para la alimentación diaria, desarrollada con **React**. Durante su desarrollo, he aprendido a manejar formularios con validaciones, gestionar entradas de usuario, enviar y reiniciar datos, y deshabilitar el botón de envío cuando es necesario. Además, he trabajado con **useReducer** para gestionar el estado de la aplicación de manera eficiente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías utilizadas
+- **React**: Biblioteca principal para la construcción de la interfaz.
+- **useReducer**: Para manejar la lógica del estado de forma estructurada.
+- **uuidv4**: Para la generación de identificadores únicos en las actividades y comidas.
+- **Heroicons**: Para añadir iconos y mejorar la interfaz de usuario.
+- **Vite**: Para la configuración y optimización del entorno de desarrollo.
 
-## Expanding the ESLint configuration
+## Lecciones aprendidas
+1. **Gestión de formularios en React**:
+   - Validaciones de entrada para asegurar datos correctos.
+   - Reinicio de datos tras la entrada del usuario.
+   - Deshabilitación del botón de envío según la validación del formulario.
+   
+2. **Gestión de estado con useReducer**:
+   - Permite una lógica más clara y modular en el manejo de acciones.
+   - Facilita la actualización de datos sin depender de múltiples estados individuales.
+   
+3. **Uso de bibliotecas externas**:
+   - **uuidv4** para asignar identificadores únicos a cada entrada de calorías.
+   - **Heroicons** para proporcionar una interfaz visualmente atractiva.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Deploy
+Puedes ver la aplicación funcionando en el siguiente enlace:  
+🔗 [CalorieTracker Deploy](https://juli-control-calorias.netlify.app)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
